@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\repository\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:repository\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\repository\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:repository\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\moduls\\hausuebung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:moduls\\hausuebung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormHUVerwwaltung.cs",
+              "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Repository\\UI\\FormHUVerwwaltung.cs",
+              "RelativeDocumentMoniker": "Repository\\UI\\FormHUVerwwaltung.cs",
+              "ToolTip": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Repository\\UI\\FormHUVerwwaltung.cs",
+              "RelativeToolTip": "Repository\\UI\\FormHUVerwwaltung.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T13:05:24.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormHUVerwwaltung.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Repository\\UI\\FormHUVerwwaltung.cs",
+              "RelativeDocumentMoniker": "Repository\\UI\\FormHUVerwwaltung.cs",
+              "ToolTip": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Repository\\UI\\FormHUVerwwaltung.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Repository\\UI\\FormHUVerwwaltung.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T12:31:33.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hausuebung.cs",
+              "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Moduls\\Hausuebung.cs",
+              "RelativeDocumentMoniker": "Moduls\\Hausuebung.cs",
+              "ToolTip": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Moduls\\Hausuebung.cs",
+              "RelativeToolTip": "Moduls\\Hausuebung.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T11:51:09.185Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
