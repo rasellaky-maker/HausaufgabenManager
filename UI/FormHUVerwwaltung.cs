@@ -94,6 +94,7 @@ namespace HausaufgabenManagerUI_WinForm
                 richTextBoxInhalt.Text);
 
             service.AddNewHomework(hu);
+            labelFehler.Visible = false;
             ResetTextBoxes();
             ConfigurateDtp();
         }
@@ -106,6 +107,7 @@ namespace HausaufgabenManagerUI_WinForm
                 buttonSpeichern.BackColor = Color.DimGray;
                 buttonNeuLaden.BackColor = Color.DimGray;
                 service.NewHomeworkList.Clear();
+                await service.LoadDgv(dataGridViewHausuafgabe);
             }
 
         }

@@ -17,7 +17,9 @@ namespace HausaufgabenManagerUI_WinForm.Repository
 
             const string sql = @"
                 SELECT fach, inhalt, faelligkeitsdatum 
-                FROM hausuebungen;
+                FROM hausuebungen
+                WHERE faelligkeitsdatum > CURDATE()
+                ORDER BY faelligkeitsdatum ASC;
             ";
 
             try

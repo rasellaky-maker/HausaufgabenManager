@@ -30,9 +30,11 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHUVerwwaltung));
             groupBoxErfassen = new GroupBox();
             labelIhnalt = new Label();
@@ -49,13 +51,13 @@
             labelOffeneHausaufgaben = new Label();
             panel2 = new Panel();
             dataGridViewHausuafgabe = new DataGridView();
-            panel3 = new Panel();
-            buttonSpeichern = new Button();
-            buttonNeuLaden = new Button();
             colFach = new DataGridViewTextBoxColumn();
             colInhalt = new DataGridViewTextBoxColumn();
             colFaellig = new DataGridViewTextBoxColumn();
             colTage = new DataGridViewTextBoxColumn();
+            panel3 = new Panel();
+            buttonSpeichern = new Button();
+            buttonNeuLaden = new Button();
             groupBoxErfassen.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -233,28 +235,91 @@
             // 
             dataGridViewHausuafgabe.AllowUserToAddRows = false;
             dataGridViewHausuafgabe.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
+            dataGridViewHausuafgabe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewHausuafgabe.BackgroundColor = Color.White;
             dataGridViewHausuafgabe.BorderStyle = BorderStyle.None;
+            dataGridViewHausuafgabe.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewHausuafgabe.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewHausuafgabe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewHausuafgabe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewHausuafgabe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewHausuafgabe.Columns.AddRange(new DataGridViewColumn[] { colFach, colInhalt, colFaellig, colTage });
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Window;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = Color.RoyalBlue;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dataGridViewHausuafgabe.DefaultCellStyle = dataGridViewCellStyle7;
             dataGridViewHausuafgabe.Dock = DockStyle.Fill;
+            dataGridViewHausuafgabe.EnableHeadersVisualStyles = false;
             dataGridViewHausuafgabe.Location = new Point(0, 0);
             dataGridViewHausuafgabe.Name = "dataGridViewHausuafgabe";
             dataGridViewHausuafgabe.ReadOnly = true;
+            dataGridViewHausuafgabe.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewHausuafgabe.RowHeadersVisible = false;
             dataGridViewHausuafgabe.RowHeadersWidth = 62;
             dataGridViewHausuafgabe.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewHausuafgabe.Size = new Size(586, 204);
             dataGridViewHausuafgabe.TabIndex = 2;
+            // 
+            // colFach
+            // 
+            colFach.DataPropertyName = "Fach";
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            colFach.DefaultCellStyle = dataGridViewCellStyle3;
+            colFach.Frozen = true;
+            colFach.HeaderText = "Fach";
+            colFach.MinimumWidth = 8;
+            colFach.Name = "colFach";
+            colFach.ReadOnly = true;
+            colFach.Width = 150;
+            // 
+            // colInhalt
+            // 
+            colInhalt.DataPropertyName = "Inhalt";
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            colInhalt.DefaultCellStyle = dataGridViewCellStyle4;
+            colInhalt.Frozen = true;
+            colInhalt.HeaderText = "Inhalt";
+            colInhalt.MinimumWidth = 8;
+            colInhalt.Name = "colInhalt";
+            colInhalt.ReadOnly = true;
+            colInhalt.Width = 150;
+            // 
+            // colFaellig
+            // 
+            colFaellig.DataPropertyName = "Faelligkeitsdatum";
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            colFaellig.DefaultCellStyle = dataGridViewCellStyle5;
+            colFaellig.Frozen = true;
+            colFaellig.HeaderText = "Fällig am";
+            colFaellig.MinimumWidth = 8;
+            colFaellig.Name = "colFaellig";
+            colFaellig.ReadOnly = true;
+            colFaellig.Width = 150;
+            // 
+            // colTage
+            // 
+            colTage.DataPropertyName = "TageBisAblauf";
+            dataGridViewCellStyle6.ForeColor = Color.Gold;
+            colTage.DefaultCellStyle = dataGridViewCellStyle6;
+            colTage.Frozen = true;
+            colTage.HeaderText = "Tage bis Ablauf";
+            colTage.MinimumWidth = 8;
+            colTage.Name = "colTage";
+            colTage.ReadOnly = true;
+            colTage.Width = 150;
             // 
             // panel3
             // 
@@ -297,59 +362,10 @@
             buttonNeuLaden.UseVisualStyleBackColor = false;
             buttonNeuLaden.Click += buttonNeuLaden_Click;
             // 
-            // colFach
-            // 
-            colFach.DataPropertyName = "Fach";
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            colFach.DefaultCellStyle = dataGridViewCellStyle2;
-            colFach.Frozen = true;
-            colFach.HeaderText = "Fach";
-            colFach.MinimumWidth = 8;
-            colFach.Name = "colFach";
-            colFach.ReadOnly = true;
-            colFach.Width = 150;
-            // 
-            // colInhalt
-            // 
-            colInhalt.DataPropertyName = "Inhalt";
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            colInhalt.DefaultCellStyle = dataGridViewCellStyle3;
-            colInhalt.Frozen = true;
-            colInhalt.HeaderText = "Inhalt";
-            colInhalt.MinimumWidth = 8;
-            colInhalt.Name = "colInhalt";
-            colInhalt.ReadOnly = true;
-            colInhalt.Width = 150;
-            // 
-            // colFaellig
-            // 
-            colFaellig.DataPropertyName = "Faelligkeitsdatum";
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            colFaellig.DefaultCellStyle = dataGridViewCellStyle4;
-            colFaellig.Frozen = true;
-            colFaellig.HeaderText = "Fällig am";
-            colFaellig.MinimumWidth = 8;
-            colFaellig.Name = "colFaellig";
-            colFaellig.ReadOnly = true;
-            colFaellig.Width = 150;
-            // 
-            // colTage
-            // 
-            colTage.DataPropertyName = "TageBisAblauf";
-            dataGridViewCellStyle5.ForeColor = Color.Gold;
-            colTage.DefaultCellStyle = dataGridViewCellStyle5;
-            colTage.Frozen = true;
-            colTage.HeaderText = "Tage bis Ablauf";
-            colTage.MinimumWidth = 8;
-            colTage.Name = "colTage";
-            colTage.ReadOnly = true;
-            colTage.Width = 150;
-            // 
             // FormHUVerwwaltung
             // 
             AutoScaleMode = AutoScaleMode.None;
+            AutoSize = true;
             ClientSize = new Size(616, 484);
             Controls.Add(panel3);
             Controls.Add(panel2);

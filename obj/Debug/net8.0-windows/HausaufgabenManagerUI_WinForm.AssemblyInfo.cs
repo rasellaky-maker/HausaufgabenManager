@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HausaufgabenManagerUI_WinForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d65a7e48196ce03fe771df6d192ac3914f27ea14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23592806f9c8a4e8da3f582e0a4ef36e7befc602")]
 [assembly: System.Reflection.AssemblyProductAttribute("HausaufgabenManagerUI_WinForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HausaufgabenManagerUI_WinForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
