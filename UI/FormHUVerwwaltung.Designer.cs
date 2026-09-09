@@ -49,13 +49,13 @@
             labelOffeneHausaufgaben = new Label();
             panel2 = new Panel();
             dataGridViewHausuafgabe = new DataGridView();
+            panel3 = new Panel();
+            buttonSpeichern = new Button();
+            buttonNeuLaden = new Button();
             colFach = new DataGridViewTextBoxColumn();
             colInhalt = new DataGridViewTextBoxColumn();
             colFaellig = new DataGridViewTextBoxColumn();
             colTage = new DataGridViewTextBoxColumn();
-            panel3 = new Panel();
-            buttonSpeichern = new Button();
-            buttonNeuLaden = new Button();
             groupBoxErfassen.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -84,7 +84,6 @@
             groupBoxErfassen.Size = new Size(586, 213);
             groupBoxErfassen.TabIndex = 0;
             groupBoxErfassen.TabStop = false;
-            groupBoxErfassen.Enter += groupBoxErfassen_Enter;
             // 
             // labelIhnalt
             // 
@@ -93,7 +92,7 @@
             labelIhnalt.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelIhnalt.Location = new Point(17, 89);
             labelIhnalt.Name = "labelIhnalt";
-            labelIhnalt.Size = new Size(65, 28);
+            labelIhnalt.Size = new Size(42, 17);
             labelIhnalt.TabIndex = 8;
             labelIhnalt.Text = "Inhalt:";
             // 
@@ -110,16 +109,16 @@
             buttonHinzufuegen.TabIndex = 7;
             buttonHinzufuegen.Text = "Hinzufuegen";
             buttonHinzufuegen.UseVisualStyleBackColor = false;
-            buttonHinzufuegen.Click +=  buttonHinzufuegen_Click;
+            buttonHinzufuegen.Click += buttonHinzufuegen_Click;
             // 
             // labelFehler
             // 
             labelFehler.AutoSize = true;
             labelFehler.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
             labelFehler.ForeColor = Color.Red;
-            labelFehler.Location = new Point(27, 167);
+            labelFehler.Location = new Point(17, 167);
             labelFehler.Name = "labelFehler";
-            labelFehler.Size = new Size(111, 28);
+            labelFehler.Size = new Size(74, 17);
             labelFehler.TabIndex = 6;
             labelFehler.Text = "Fehler (....)...";
             labelFehler.Visible = false;
@@ -144,7 +143,7 @@
             dateTimePickerFaellig.Location = new Point(423, 43);
             dateTimePickerFaellig.MinDate = new DateTime(2026, 9, 8, 15, 35, 1, 0);
             dateTimePickerFaellig.Name = "dateTimePickerFaellig";
-            dateTimePickerFaellig.Size = new Size(135, 31);
+            dateTimePickerFaellig.Size = new Size(135, 23);
             dateTimePickerFaellig.TabIndex = 4;
             dateTimePickerFaellig.Value = new DateTime(2026, 9, 8, 15, 35, 1, 0);
             // 
@@ -155,10 +154,9 @@
             labelFaelligAm.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelFaelligAm.Location = new Point(323, 45);
             labelFaelligAm.Name = "labelFaelligAm";
-            labelFaelligAm.Size = new Size(94, 28);
+            labelFaelligAm.Size = new Size(63, 17);
             labelFaelligAm.TabIndex = 3;
             labelFaelligAm.Text = "Fällig am:";
-            labelFaelligAm.Click += labelFaelligAm_Click;
             // 
             // textBoxFach
             // 
@@ -167,7 +165,7 @@
             textBoxFach.Location = new Point(88, 43);
             textBoxFach.MaxLength = 10;
             textBoxFach.Name = "textBoxFach";
-            textBoxFach.Size = new Size(100, 31);
+            textBoxFach.Size = new Size(100, 23);
             textBoxFach.TabIndex = 2;
             // 
             // labelFach
@@ -177,7 +175,7 @@
             labelFach.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelFach.Location = new Point(27, 45);
             labelFach.Name = "labelFach";
-            labelFach.Size = new Size(55, 28);
+            labelFach.Size = new Size(37, 17);
             labelFach.TabIndex = 1;
             labelFach.Text = "Fach:";
             // 
@@ -187,7 +185,7 @@
             labelNeueHausuebungErfassen.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelNeueHausuebungErfassen.Location = new Point(6, 4);
             labelNeueHausuebungErfassen.Name = "labelNeueHausuebungErfassen";
-            labelNeueHausuebungErfassen.Size = new Size(309, 32);
+            labelNeueHausuebungErfassen.Size = new Size(206, 21);
             labelNeueHausuebungErfassen.TabIndex = 0;
             labelNeueHausuebungErfassen.Text = "Neue HausübungErfassen";
             // 
@@ -198,7 +196,7 @@
             labelInfo.ForeColor = Color.Gray;
             labelInfo.Location = new Point(3, 17);
             labelInfo.Name = "labelInfo";
-            labelInfo.Size = new Size(91, 21);
+            labelInfo.Size = new Size(62, 13);
             labelInfo.TabIndex = 9;
             labelInfo.Text = "Place 4 Info";
             labelInfo.Visible = false;
@@ -216,9 +214,9 @@
             // 
             labelOffeneHausaufgaben.AutoSize = true;
             labelOffeneHausaufgaben.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            labelOffeneHausaufgaben.Location = new Point(6, 3);
+            labelOffeneHausaufgaben.Location = new Point(9, 10);
             labelOffeneHausaufgaben.Name = "labelOffeneHausaufgaben";
-            labelOffeneHausaufgaben.Size = new Size(258, 32);
+            labelOffeneHausaufgaben.Size = new Size(173, 21);
             labelOffeneHausaufgaben.TabIndex = 3;
             labelOffeneHausaufgaben.Text = "Offene Hausübungen";
             // 
@@ -254,8 +252,50 @@
             dataGridViewHausuafgabe.ReadOnly = true;
             dataGridViewHausuafgabe.RowHeadersVisible = false;
             dataGridViewHausuafgabe.RowHeadersWidth = 62;
+            dataGridViewHausuafgabe.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewHausuafgabe.Size = new Size(586, 204);
             dataGridViewHausuafgabe.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(buttonSpeichern);
+            panel3.Controls.Add(buttonNeuLaden);
+            panel3.Controls.Add(labelInfo);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(15, 421);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(586, 53);
+            panel3.TabIndex = 12;
+            // 
+            // buttonSpeichern
+            // 
+            buttonSpeichern.Anchor = AnchorStyles.Right;
+            buttonSpeichern.BackColor = Color.DimGray;
+            buttonSpeichern.FlatStyle = FlatStyle.Flat;
+            buttonSpeichern.Font = new Font("Segoe UI", 9F);
+            buttonSpeichern.ForeColor = Color.White;
+            buttonSpeichern.Location = new Point(287, 12);
+            buttonSpeichern.Name = "buttonSpeichern";
+            buttonSpeichern.Size = new Size(135, 35);
+            buttonSpeichern.TabIndex = 14;
+            buttonSpeichern.Text = "Speichern";
+            buttonSpeichern.UseVisualStyleBackColor = false;
+            buttonSpeichern.Click += buttonSpeichern_Click;
+            // 
+            // buttonNeuLaden
+            // 
+            buttonNeuLaden.Anchor = AnchorStyles.Right;
+            buttonNeuLaden.BackColor = Color.DimGray;
+            buttonNeuLaden.FlatStyle = FlatStyle.Flat;
+            buttonNeuLaden.Font = new Font("Segoe UI", 9F);
+            buttonNeuLaden.ForeColor = Color.White;
+            buttonNeuLaden.Location = new Point(448, 12);
+            buttonNeuLaden.Name = "buttonNeuLaden";
+            buttonNeuLaden.Size = new Size(135, 35);
+            buttonNeuLaden.TabIndex = 13;
+            buttonNeuLaden.Text = "Neu Laden";
+            buttonNeuLaden.UseVisualStyleBackColor = false;
+            buttonNeuLaden.Click += buttonNeuLaden_Click;
             // 
             // colFach
             // 
@@ -298,7 +338,7 @@
             // colTage
             // 
             colTage.DataPropertyName = "TageBisAblauf";
-            dataGridViewCellStyle5.ForeColor = Color.LimeGreen;
+            dataGridViewCellStyle5.ForeColor = Color.Gold;
             colTage.DefaultCellStyle = dataGridViewCellStyle5;
             colTage.Frozen = true;
             colTage.HeaderText = "Tage bis Ablauf";
@@ -306,46 +346,6 @@
             colTage.Name = "colTage";
             colTage.ReadOnly = true;
             colTage.Width = 150;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(buttonSpeichern);
-            panel3.Controls.Add(buttonNeuLaden);
-            panel3.Controls.Add(labelInfo);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(15, 421);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(586, 53);
-            panel3.TabIndex = 12;
-            // 
-            // buttonSpeichern
-            // 
-            buttonSpeichern.Anchor = AnchorStyles.Right;
-            buttonSpeichern.BackColor = Color.DimGray;
-            buttonSpeichern.FlatStyle = FlatStyle.Flat;
-            buttonSpeichern.Font = new Font("Segoe UI", 9F);
-            buttonSpeichern.ForeColor = Color.White;
-            buttonSpeichern.Location = new Point(287, 12);
-            buttonSpeichern.Name = "buttonSpeichern";
-            buttonSpeichern.Size = new Size(135, 35);
-            buttonSpeichern.TabIndex = 14;
-            buttonSpeichern.Text = "Speichern";
-            buttonSpeichern.UseVisualStyleBackColor = false;
-            // 
-            // buttonNeuLaden
-            // 
-            buttonNeuLaden.Anchor = AnchorStyles.Right;
-            buttonNeuLaden.BackColor = Color.DimGray;
-            buttonNeuLaden.FlatStyle = FlatStyle.Flat;
-            buttonNeuLaden.Font = new Font("Segoe UI", 9F);
-            buttonNeuLaden.ForeColor = Color.White;
-            buttonNeuLaden.Location = new Point(448, 12);
-            buttonNeuLaden.Name = "buttonNeuLaden";
-            buttonNeuLaden.Size = new Size(135, 35);
-            buttonNeuLaden.TabIndex = 13;
-            buttonNeuLaden.Text = "Neu Laden";
-            buttonNeuLaden.UseVisualStyleBackColor = false;
-            buttonNeuLaden.Click += buttonNeuLaden_Click;
             // 
             // FormHUVerwwaltung
             // 
@@ -388,12 +388,12 @@
         private Label labelOffeneHausaufgaben;
         private Panel panel2;
         private DataGridView dataGridViewHausuafgabe;
+        private Panel panel3;
+        private Button buttonSpeichern;
+        private Button buttonNeuLaden;
         private DataGridViewTextBoxColumn colFach;
         private DataGridViewTextBoxColumn colInhalt;
         private DataGridViewTextBoxColumn colFaellig;
         private DataGridViewTextBoxColumn colTage;
-        private Panel panel3;
-        private Button buttonSpeichern;
-        private Button buttonNeuLaden;
     }
 }

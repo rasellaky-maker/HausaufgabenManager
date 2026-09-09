@@ -17,11 +17,13 @@ namespace HausaufgabenManagerUI_WinForm.Services
         internal List<Hausuebung> NewHomeworkList { get; set; }
         private Label LabelInfo { get; set; }
         private Button BtnSpeichern { get; set; }
+        private Button BtnNeuLaden{ get; set; }
 
-        public HausuebungService(Connection connectionType, Label labelInfo, Button btnSpeichern)
+        public HausuebungService(Connection connectionType, Label labelInfo, Button btnSpeichern, Button btnNeuLaden)
         {
             LabelInfo = labelInfo;
             BtnSpeichern = btnSpeichern;
+            BtnNeuLaden = btnNeuLaden;
             NewHomeworkList = new List<Hausuebung>();
             
             
@@ -41,35 +43,53 @@ namespace HausaufgabenManagerUI_WinForm.Services
 
                 if (list.Count <= 0)
                 {
-                    LabelInfo.Visible = true;
-                    LabelInfo.Text = "Keine Hausaufgaben gefunden.";
+                    MappWrightInfo("Keine Hausaufgaben gefunden.");
+                }
+
+                foreach(var el in this.NewHomeworkList)
+                {
+                    list.Add(el);
                 }
 
                 dgv.DataSource = list;
-                LabelInfo.Visible = true;
-                LabelInfo.Text = $"Anzahl der Hausaufgaben: {dgv.RowCount}";
+                ColorDgv(dgv);
+                MappWrightInfo($"Anzahl der Hausaufgaben: {dgv.RowCount}");
             }
             catch (MySqlException ex)
             {
                 MappServerFehler(ex);
+                MappWrightInfo(ex.Message);
             }
         }
 
-        public async Task AddNewHomework(Hausuebung newHomework, Button btnSpeichern)
+        public void AddNewHomework(Hausuebung newHomework)
+        {
+
+            this.NewHomeworkList.Add(newHomework);
+            MappWrightInfo("Hausaufgabe wurde erfolgreich erstelt.");
+            BtnNeuLaden.BackColor = Color.RoyalBlue;
+            BtnSpeichern.BackColor = Color.RoyalBlue;
+
+        }
+
+        public async Task Speichern()
         {
             try
             {
-                var result = await _repository.Add(newHomework);
+                Hausuebung result = null;
+                foreach (var el in this.NewHomeworkList)
+                {
+                    result = await _repository.Add(el);
+                }
                 if (result == null)
                 {
-                    LabelInfo.Visible = true;
-                    LabelInfo.Text = "Hausaufgabe konnte nicht gespeichert werden.";
+                    MappWrightInfo("Hausaufgabe konnte nicht gespeichert werden.");
                 }
                 else
                 {
-                    NewHomeworkList.Add(newHomework);
-                    LabelInfo.Visible = true;
-                    LabelInfo.Text = "Hausaufgabe wurde erfolgreich gespeichert.";
+                    BtnSpeichern.BackColor = Color.RoyalBlue;
+                    MappWrightInfo("Hausaufgabe wurde erfolgreich erstelt.");
+                    this.NewHomeworkList.Clear();
                 }
             }
             catch (MySqlException ex)
@@ -78,7 +98,27 @@ namespace HausaufgabenManagerUI_WinForm.Services
             }
         }
 
-        private void MappServerFehler(MySqlException ex)
+        void ColorDgv(DataGridView dgv)
+        {
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                if (int.TryParse(row.Cells["colTage"].Value?.ToString(), out int value))
+                {
+                    if (value <= 2)
+                        row.Cells["colTage"].Style.ForeColor = Color.Red;
+                    else if (value > 5)
+                        row.Cells["colTage"].Style.ForeColor = Color.LimeGreen;
+                    else
+                        row.Cells["colTage"].Style.ForeColor = Color.Gold;
+                }
+            }
+        }
+        void MappWrightInfo(string textMessage)
+        {
+            LabelInfo.Text = textMessage;
+            LabelInfo.Visible = true;
+        }
+        private void MappServerFehler(Exception ex)
         {
             LabelInfo.Visible = true;
             LabelInfo.Text = "Connection...";

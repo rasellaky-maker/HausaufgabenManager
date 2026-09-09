@@ -789,23 +789,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VisualStudioDaten\\Projekts\\HausübungVerwaltung\\HausaufgabenManagerUI_WinForm.csproj",
+      "projectUniqueName": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\HausaufgabenManagerUI_WinForm.csproj",
       "projectName": "HausaufgabenManagerUI_WinForm",
-      "projectPath": "D:\\VisualStudioDaten\\Projekts\\HausübungVerwaltung\\HausaufgabenManagerUI_WinForm.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\VisualStudioDaten\\Projekts\\HausübungVerwaltung\\obj\\",
+      "projectPath": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\HausaufgabenManagerUI_WinForm.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -871,7 +871,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

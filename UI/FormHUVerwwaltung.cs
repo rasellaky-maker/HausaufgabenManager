@@ -14,7 +14,7 @@ namespace HausaufgabenManagerUI_WinForm
         {
             InitializeComponent();
 
-            service = new HausuebungService(Connection.Global, labelInfo, buttonSpeichern);
+            service = new HausuebungService(Connection.Global, labelInfo, buttonSpeichern, buttonNeuLaden);
 
             ConfigurateDtp();
             ConfigurateButtons();
@@ -54,6 +54,7 @@ namespace HausaufgabenManagerUI_WinForm
         {
             dateTimePickerFaellig.MaxDate = DateTime.Today.AddYears(1);
             dateTimePickerFaellig.MinDate = DateTime.Today.AddDays(1);
+            dateTimePickerFaellig.Value = dateTimePickerFaellig.MinDate;
         }
         void ConfigurateLables()
         {
@@ -71,23 +72,13 @@ namespace HausaufgabenManagerUI_WinForm
             dataGridViewHausuafgabe.AutoGenerateColumns = false;
             dataGridViewHausuafgabe.CellBorderStyle = DataGridViewCellBorderStyle.None;
         }
-
-        private void groupBoxErfassen_Enter(object sender, EventArgs e)
+        void ResetTextBoxes()
         {
-
+            textBoxFach.Text = string.Empty;
+            richTextBoxInhalt.Text = string.Empty;
         }
 
-        private void labelFaelligAm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonNeuLaden_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void buttonHinzufuegen_Click(object sender, EventArgs e)
+        private void buttonHinzufuegen_Click(object sender, EventArgs e)
         {
             if (textBoxFach.Text.Length < 2)
             {
@@ -97,8 +88,35 @@ namespace HausaufgabenManagerUI_WinForm
                 return;
             }
 
+            var hu = new Hausuebung(
+                textBoxFach.Text,
+                Convert.ToDateTime(this.dateTimePickerFaellig.Value),
+                richTextBoxInhalt.Text);
 
-            await service.AddNewHomework(new Hausuebung(textBoxFach.Text, Convert.ToDateTime(this.dateTimePickerFaellig.Value), richTextBoxInhalt.Text), buttonSpeichern);
+            service.AddNewHomework(hu);
+            ResetTextBoxes();
+            ConfigurateDtp();
+        }
+
+        private async void buttonSpeichern_Click(object sender, EventArgs e)
+        {
+            if (service.NewHomeworkList.Count > 0)
+            {
+                await service.Speichern();
+                buttonSpeichern.BackColor = Color.DimGray;
+                buttonNeuLaden.BackColor = Color.DimGray;
+                service.NewHomeworkList.Clear();
+            }
+
+        }
+
+        private async void buttonNeuLaden_Click(object sender, EventArgs e)
+        {
+            if (service.NewHomeworkList.Count > 0)
+            {
+                buttonNeuLaden.BackColor = Color.DimGray;
+                await service.LoadDgv(dataGridViewHausuafgabe);
+            }
         }
     }
 }

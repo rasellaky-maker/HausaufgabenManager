@@ -58,3 +58,17 @@ D:\VisualStudioDaten\Projekts\HausübungVerwaltung\obj\Debug\net8.0-windows\refi
 D:\VisualStudioDaten\Projekts\HausübungVerwaltung\obj\Debug\net8.0-windows\HausaufgabenManagerUI_WinForm.pdb
 D:\VisualStudioDaten\Projekts\HausübungVerwaltung\obj\Debug\net8.0-windows\HausaufgabenManagerUI_WinForm.genruntimeconfig.cache
 D:\VisualStudioDaten\Projekts\HausübungVerwaltung\obj\Debug\net8.0-windows\ref\HausaufgabenManagerUI_WinForm.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\appsettings.json
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\System.Text.Json.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\vspojekts\HausaufgabenManagerUI_WinForm\obj\Debug\net8.0-windows\HausaufgabenManagerUI_WinForm.sourcelink.json
