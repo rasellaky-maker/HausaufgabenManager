@@ -42,5 +42,28 @@ namespace HausaufgabenManagerUI_WinForm.Repository
                 throw;
             }
         }
+        internal async Task<Hausuebung> Add(Hausuebung newHomework)
+        {
+            const string sql = @"
+                INSERT INTO hausuebungen (fach, inhalt, faelligkeitsdatum) 
+                VALUES (@fach, @inhalt, @faelligkeitsdatum);
+            ";
+            try
+            {
+                using var conn = new MySqlConnection(ConnectionString);
+                await conn.OpenAsync();
+                using var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@fach", newHomework.Fach);
+                cmd.Parameters.AddWithValue("@inhalt", newHomework.Inhalt);
+                cmd.Parameters.AddWithValue("@faelligkeitsdatum", newHomework.Faelligkeitsdatum);
+                await cmd.ExecuteNonQueryAsync();
+
+                return newHomework;
+            }
+            catch (MySqlException ex)
+            {
+                throw;
+            }
+        }
     }
 }

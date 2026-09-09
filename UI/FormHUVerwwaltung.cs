@@ -1,5 +1,7 @@
 using HausaufgabenManagerUI_WinForm.Repository;
+using HausaufgabenManagerUI_WinForm.Services;
 using System.Drawing.Drawing2D;
+using HausaufgabenManagerUI_WinForm.Moduls;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -7,16 +9,21 @@ namespace HausaufgabenManagerUI_WinForm
 {
     public partial class FormHUVerwwaltung : Form
     {
-        HausuebungenRepository repository = new HausuebungenRepository("Server=localhost;Database=huverwaltung;Uid=root;Pwd=123schule123;");
+        private HausuebungService service = null;
         public FormHUVerwwaltung()
         {
             InitializeComponent();
+
+            service = new HausuebungService(Connection.Global, labelInfo, buttonSpeichern);
+
             ConfigurateDtp();
             ConfigurateButtons();
             ConfigurateDgv();
+            ConfigurateLables();
 
-            Load += async (s, e) => await LoadDgv();
+            Load += async (s, e) => await service.LoadDgv(dataGridViewHausuafgabe);
         }
+
         private void SetupRoundedButton(Button btn, int radius)
         {
             btn.FlatStyle = FlatStyle.Flat;
@@ -48,6 +55,11 @@ namespace HausaufgabenManagerUI_WinForm
             dateTimePickerFaellig.MaxDate = DateTime.Today.AddYears(1);
             dateTimePickerFaellig.MinDate = DateTime.Today.AddDays(1);
         }
+        void ConfigurateLables()
+        {
+            labelInfo.Text = "Connection...";
+            labelInfo.Visible = true;
+        }
         void ConfigurateButtons()
         {
             SetupRoundedButton(buttonHinzufuegen, 10);
@@ -60,24 +72,33 @@ namespace HausaufgabenManagerUI_WinForm
             dataGridViewHausuafgabe.CellBorderStyle = DataGridViewCellBorderStyle.None;
         }
 
-        async Task LoadDgv()
+        private void groupBoxErfassen_Enter(object sender, EventArgs e)
         {
-            try
-            {
-                var list = await repository.GetAll();
 
-                if (list.Count <= 0)
-                {
-                    MessageBox.Show("gdfgfdgfdgfdg", "Fehler 500", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                dataGridViewHausuafgabe.DataSource = list;
-            }
-            catch (MySqlConnector.MySqlException ex)
-            {
-                MessageBox.Show("Datenbank ist nicht erreichbar", "Fehler 500", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
+        private void labelFaelligAm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonNeuLaden_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void buttonHinzufuegen_Click(object sender, EventArgs e)
+        {
+            if (textBoxFach.Text.Length < 2)
+            {
+                labelFehler.Text = "Fehler: Das Fach muss mindestens 2 Zeichen lang sein.";
+                labelFehler.Visible = true;
+
+                return;
+            }
+
+
+            await service.AddNewHomework(new Hausuebung(textBoxFach.Text, Convert.ToDateTime(this.dateTimePickerFaellig.Value), richTextBoxInhalt.Text), buttonSpeichern);
+        }
     }
 }
