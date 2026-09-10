@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\services\\hausuebungservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:services\\hausuebungservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\repository\\hausuebungenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:repository\\hausuebungenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:ui\\formhuverwwaltung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\services\\hausuebungservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:services\\hausuebungservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|d:\\vspojekts\\hausaufgabenmanagerui_winform\\repository\\hausuebungenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5064C629-18A3-40F5-AA63-6E18E7ADD268}|HausaufgabenManagerUI_WinForm.csproj|solutionrelative:repository\\hausuebungenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -29,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HausuebungenRepository.cs",
               "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Repository\\HausuebungenRepository.cs",
               "RelativeDocumentMoniker": "Repository\\HausuebungenRepository.cs",
@@ -55,25 +55,23 @@
               "RelativeToolTip": "Repository\\HausuebungenRepository.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T14:30:58.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-09T14:30:58.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HausuebungService.cs",
               "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Services\\HausuebungService.cs",
               "RelativeDocumentMoniker": "Services\\HausuebungService.cs",
               "ToolTip": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\Services\\HausuebungService.cs",
               "RelativeToolTip": "Services\\HausuebungService.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAkwGMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T14:01:40.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-09T14:01:40.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FormHUVerwwaltung.cs",
               "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\UI\\FormHUVerwwaltung.cs",
               "RelativeDocumentMoniker": "UI\\FormHUVerwwaltung.cs",
@@ -86,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FormHUVerwwaltung.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\vspojekts\\HausaufgabenManagerUI_WinForm\\UI\\FormHUVerwwaltung.cs",
               "RelativeDocumentMoniker": "UI\\FormHUVerwwaltung.cs",
